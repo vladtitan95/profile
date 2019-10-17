@@ -1,0 +1,1725 @@
+@media (max-width: 767px) {
+  /* line 3, blocks/_button-burger.scss */
+  .navBurger {
+    cursor: pointer;
+    background: #000000;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-clip: content-box;
+    z-index: 3;
+    width: 25px;
+    height: 25px;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 19, blocks/_button-burger.scss */
+  .navBurger:before, .navBurger:after {
+    content: "";
+    position: absolute;
+    background: #000000;
+    height: 2px;
+    width: 100%;
+    right: 0;
+    will-change: rotate;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 30, blocks/_button-burger.scss */
+  .navBurger:before {
+    top: -10px;
+  }
+
+  /* line 33, blocks/_button-burger.scss */
+  .navBurger:after {
+    bottom: -9px;
+  }
+
+  /* line 37, blocks/_button-burger.scss */
+  .navBurger.active {
+    background: transparent;
+    background-clip: content-box;
+  }
+
+  /* line 41, blocks/_button-burger.scss */
+  .navBurger.active:before {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: 0;
+    left: 0;
+    background: #000000;
+    width: 100%;
+  }
+
+  /* line 50, blocks/_button-burger.scss */
+  .navBurger.active:after {
+    bottom: 1px;
+    left: 0;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    background: #000000;
+    width: 100%;
+  }
+
+  /* line 61, blocks/_button-burger.scss */
+  .header__block {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: fixed;
+    z-index: 2;
+    background: #ffffff;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    visibility: hidden;
+    overflow: auto;
+  }
+
+  /* line 81, blocks/_button-burger.scss */
+  .header__block.open {
+    display: contents;
+    opacity: .99;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* line 88, blocks/_button-burger.scss */
+  .header__block.open li {
+    display: block;
+    -webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+    animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+  }
+
+  /* line 95, blocks/_button-burger.scss */
+  .nav {
+    text-align: center;
+    margin-bottom: -20px;
+  }
+
+  /* line 100, blocks/_button-burger.scss */
+  .nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+  }
+
+  /* line 109, blocks/_button-burger.scss */
+  .nav ul li {
+    display: block;
+    position: relative;
+    opacity: 0;
+    width: 100%;
+    border-bottom: 2px solid #F4F4F4;
+    padding: 0;
+  }
+
+  /* line 117, blocks/_button-burger.scss */
+  .nav ul li:nth-child(1) {
+    border-top: 2px solid #F4F4F4;
+    margin-top: 12px;
+  }
+
+  /* line 121, blocks/_button-burger.scss */
+  .nav ul li:nth-child(3) {
+    border-bottom: none;
+  }
+
+  /* line 126, blocks/_button-burger.scss */
+  .header__block.container {
+    padding: 0;
+  }
+
+  /* line 129, blocks/_button-burger.scss */
+  .nav ul li a {
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 40px 10px 40px;
+    margin: 0;
+    -webkit-transition: .2s;
+    transition: .2s;
+    text-transform: uppercase;
+  }
+
+  /* line 142, blocks/_button-burger.scss */
+  .nav ul li a:hover, .nav ul li a:active, .nav ul li a:focus {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+    padding-left: 80px;
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  /* line 150, blocks/_button-burger.scss */
+  .locked {
+    overflow: hidden;
+    margin-bottom: -20px;
+  }
+
+  @-webkit-keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 50px;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 50px;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+}
+@media (max-width: 320px) {
+  /* line 2, blocks/_header.scss */
+  .header__section {
+    width: 100%;
+  }
+}
+/* line 6, blocks/_header.scss */
+.header__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+/* line 15, blocks/_header.scss */
+.header__section .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 20, blocks/_header.scss */
+.header__section .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+@media (min-width: 768px) {
+  /* line 29, blocks/_header.scss */
+  .header__section {
+    padding-top: 25px;
+  }
+  /* line 31, blocks/_header.scss */
+  .header__section .menu {
+    margin: 0;
+  }
+
+  /* line 35, blocks/_header.scss */
+  .nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  /* line 39, blocks/_header.scss */
+  .nav .menu li:nth-child(1) {
+    padding-right: 34px;
+  }
+  /* line 41, blocks/_header.scss */
+  .nav .menu li:nth-child(2) {
+    padding-right: 34px;
+  }
+
+  /* line 45, blocks/_header.scss */
+  .menu__link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+  }
+  /* line 54, blocks/_header.scss */
+  .menu__link:hover {
+    color: #727272;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  /* line 57, blocks/_header.scss */
+  .menu__link:hover:focus {
+    color: #CFCFCF;
+  }
+
+  /* line 62, blocks/_header.scss */
+  .menu__link--active {
+    border-bottom: 2px solid #68B738;
+    padding-bottom: 5px;
+  }
+}
+@media (min-width: 1440px) {
+  /* line 68, blocks/_header.scss */
+  .header__logo-img:hover {
+    opacity: 0.7;
+  }
+
+  /* line 71, blocks/_header.scss */
+  .header__section {
+    padding-top: 52px;
+  }
+
+  /* line 74, blocks/_header.scss */
+  .menu__link {
+    font-size: 20px;
+  }
+}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+/* line 11, _normalize.scss */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+/**
+ * Render the `main` element consistently in IE.
+ */
+/* line 29, _normalize.scss */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 47, _normalize.scss */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 58, _normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+/* line 70, _normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 79, _normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 89, _normalize.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 99, _normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 110, _normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 119, _normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 127, _normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 131, _normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+/* line 142, _normalize.scss */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 154, _normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 169, _normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 179, _normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 188, _normalize.scss */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 199, _normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 211, _normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+/* line 222, _normalize.scss */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 233, _normalize.scss */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 246, _normalize.scss */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+/* line 254, _normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+/* line 263, _normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 273, _normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 283, _normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+/* line 292, _normalize.scss */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 301, _normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+/* line 313, _normalize.scss */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 321, _normalize.scss */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+/* line 332, _normalize.scss */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+/* line 340, _normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 1, _common.scss */
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 8, _common.scss */
+ol, ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 13, _common.scss */
+blockquote, figure, h1, h2, h3, h4, h5, h6, ol, p, ul {
+  margin: 0;
+}
+
+/* line 16, _common.scss */
+*::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 20, _common.scss */
+.container {
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+}
+
+@media (min-width: 768px) {
+  /* line 26, _common.scss */
+  .container {
+    min-width: 708px;
+    margin: 0 auto;
+    padding: 0 30px 0 30px;
+  }
+}
+@media (min-width: 1440px) {
+  /* line 34, _common.scss */
+  .container {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 40px 0 40px;
+  }
+}
+/* line 1, blocks/_profile.scss */
+.profile {
+  margin-bottom: 30px;
+}
+/* line 3, blocks/_profile.scss */
+.profile__title {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 30px 0 35px 0;
+  color: #111111;
+}
+/* line 9, blocks/_profile.scss */
+.profile__subtitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 226px;
+  color: #111111;
+}
+
+/* line 18, blocks/_profile.scss */
+.form {
+  margin-top: 38px;
+}
+/* line 21, blocks/_profile.scss */
+.form__block {
+  margin-top: 20px;
+  padding: 22px 20px 12px 20px;
+  border-top: 1px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+/* line 29, blocks/_profile.scss */
+.form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 14px;
+}
+/* line 35, blocks/_profile.scss */
+.form__label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #111111;
+  text-transform: uppercase;
+  margin-right: 14px;
+}
+/* line 42, blocks/_profile.scss */
+.form__input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #F2F2F2;
+  padding-left: 15px;
+  padding-right: 45px;
+  font-size: 16px;
+  font-weight: 400;
+}
+/* line 52, blocks/_profile.scss */
+.form__check {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  margin-right: 15px;
+}
+/* line 58, blocks/_profile.scss */
+.form__radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+/* line 64, blocks/_profile.scss */
+.form input[type='radio']:before {
+  content: '';
+  display: block;
+  width: 45%;
+  height: 45%;
+  margin: 28%;
+  border-radius: 50%;
+}
+/* line 73, blocks/_profile.scss */
+.form input[type='radio']:checked:before {
+  background: #68B738;
+}
+/* line 76, blocks/_profile.scss */
+.form input[type='radio'] {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #A9A9A9;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+/* line 87, blocks/_profile.scss */
+.form__contact {
+  margin-top: 30px;
+}
+/* line 90, blocks/_profile.scss */
+.form__contact .form__input--mail {
+  background: url("/image/mobile-icon/mail.png") no-repeat scroll 191px 17px;
+}
+/* line 93, blocks/_profile.scss */
+.form__contact .form__input--phone {
+  background: url("/image/mobile-icon/phone.png") no-repeat scroll 169px 14px;
+}
+
+/* line 97, blocks/_profile.scss */
+.form__title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #111111;
+  margin-bottom: 30px;
+}
+/* line 104, blocks/_profile.scss */
+.form__title:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: #68B738;
+  right: -20px;
+  top: 14px;
+}
+
+/* line 114, blocks/_profile.scss */
+.form__contact {
+  margin-top: 30px;
+}
+
+/* line 117, blocks/_profile.scss */
+textarea {
+  width: 100%;
+  height: 150px;
+  padding-top: 10px;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* line 123, blocks/_profile.scss */
+textarea::-webkit-input-placeholder {
+  text-transform: uppercase;
+  text-align: center;
+  color: #111111;
+}
+textarea:-ms-input-placeholder {
+  text-transform: uppercase;
+  text-align: center;
+  color: #111111;
+}
+textarea::-ms-input-placeholder {
+  text-transform: uppercase;
+  text-align: center;
+  color: #111111;
+}
+textarea::placeholder {
+  text-transform: uppercase;
+  text-align: center;
+  color: #111111;
+}
+
+/* line 129, blocks/_profile.scss */
+.form__title--contact:before {
+  width: 150px;
+}
+
+/* line 132, blocks/_profile.scss */
+.form__title--additionally:before {
+  width: 135px;
+}
+
+/* line 135, blocks/_profile.scss */
+.form__additionally {
+  margin-top: 30px;
+}
+
+/* line 138, blocks/_profile.scss */
+.form__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 13px;
+}
+
+/* line 143, blocks/_profile.scss */
+.form__box {
+  margin-right: 10px;
+}
+
+/* line 146, blocks/_profile.scss */
+input[type='checkbox']:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 17%;
+  border-radius: 50%;
+}
+
+/* line 154, blocks/_profile.scss */
+input[type='checkbox']:checked:before {
+  background: url("/image/mobile-icon/tick.png") no-repeat;
+}
+
+/* line 157, blocks/_profile.scss */
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #A9A9A9;
+  outline: none;
+  cursor: pointer;
+}
+
+/* line 165, blocks/_profile.scss */
+.form__button {
+  width: 100%;
+  background-color: #68B738;
+  color: #ffffff;
+  padding: 10px 0;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 21px;
+}
+
+/* line 177, blocks/_profile.scss */
+.form__span {
+  display: block;
+  text-align: center;
+  font-family: 'Arial',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  /* line 185, blocks/_profile.scss */
+  .form__block {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 22px 0 12px 0;
+    border-right: 1px solid #F2F2F2;
+    border-left: 1px solid #F2F2F2;
+  }
+
+  /* line 192, blocks/_profile.scss */
+  .form__radio {
+    margin-left: 28px;
+    margin-bottom: 13px;
+  }
+
+  /* line 196, blocks/_profile.scss */
+  .form {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  /* line 200, blocks/_profile.scss */
+  .title {
+    font-size: 60px;
+  }
+
+  /* line 203, blocks/_profile.scss */
+  .subtitle {
+    width: 323px;
+    font-size: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  /* line 209, blocks/_profile.scss */
+  .form__label {
+    font-size: 20px;
+  }
+
+  /* line 212, blocks/_profile.scss */
+  .form__title {
+    font-size: 36px;
+    margin-bottom: 70px;
+    margin-top: 70px;
+  }
+
+  /* line 219, blocks/_profile.scss */
+  .form input[type='radio'] {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* line 224, blocks/_profile.scss */
+  .form__title:before {
+    content: '';
+    position: absolute;
+    width: 145px;
+    height: 3px;
+    background-color: #68B738;
+    right: -70px;
+    top: 14px;
+  }
+
+  /* line 234, blocks/_profile.scss */
+  .form__title:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #68B738;
+    left: -70px;
+    top: 14px;
+  }
+
+  /* line 243, blocks/_profile.scss */
+  .form__title--contact:before {
+    width: 477px;
+  }
+
+  /* line 246, blocks/_profile.scss */
+  .form__title--additionally:before {
+    width: 447px;
+  }
+
+  /* line 250, blocks/_profile.scss */
+  .form__contact .form__input--mail {
+    background: url("/image/mobile-icon/mail.png") no-repeat scroll 522px 17px;
+  }
+  /* line 253, blocks/_profile.scss */
+  .form__contact .form__input--phone {
+    background: url("/image/mobile-icon/phone.png") no-repeat scroll 497px 14px;
+  }
+
+  /* line 258, blocks/_profile.scss */
+  textarea::-webkit-input-placeholder {
+    text-align: left;
+    font-size: 20px;
+  }
+  textarea:-ms-input-placeholder {
+    text-align: left;
+    font-size: 20px;
+  }
+  textarea::-ms-input-placeholder {
+    text-align: left;
+    font-size: 20px;
+  }
+  textarea::placeholder {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  /* line 264, blocks/_profile.scss */
+  .form__additionally-block {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  /* line 270, blocks/_profile.scss */
+  .form__checkbox {
+    width: 50%;
+    margin-bottom: 32px;
+  }
+
+  /* line 274, blocks/_profile.scss */
+  input[type='checkbox']:before {
+    margin: 25%;
+  }
+
+  /* line 277, blocks/_profile.scss */
+  input[type='checkbox'] {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* line 282, blocks/_profile.scss */
+  .form__submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  /* line 289, blocks/_profile.scss */
+  .form__button {
+    width: 283px;
+    margin-bottom: 0;
+    padding: 15px 0;
+    font-size: 20px;
+  }
+
+  /* line 295, blocks/_profile.scss */
+  .form__span {
+    width: 50%;
+    text-align: left;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1440px) {
+  /* line 302, blocks/_profile.scss */
+  .form__block {
+    width: 570px;
+    height: 196px;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+  }
+
+  /* line 312, blocks/_profile.scss */
+  .form__statistics {
+    width: 570px;
+  }
+
+  /* line 315, blocks/_profile.scss */
+  .form__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  /* line 319, blocks/_profile.scss */
+  .form__group {
+    margin-bottom: 20px;
+  }
+
+  /* line 322, blocks/_profile.scss */
+  .form__input {
+    height: 49px;
+  }
+
+  /* line 325, blocks/_profile.scss */
+  .form__group--last {
+    margin-bottom: 0;
+  }
+
+  /* line 328, blocks/_profile.scss */
+  .radio--first {
+    margin-top: 29px;
+  }
+
+  /* line 331, blocks/_profile.scss */
+  .form {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 66px;
+  }
+
+  /* line 336, blocks/_profile.scss */
+  .subtitle {
+    padding-left: 0;
+  }
+
+  /* line 339, blocks/_profile.scss */
+  .form__contact {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  /* line 345, blocks/_profile.scss */
+  .group {
+    width: 45%;
+  }
+
+  /* line 349, blocks/_profile.scss */
+  .form__contact .form__input--mail {
+    background: url(/image/mobile-icon/mail.png) no-repeat scroll 466px 17px;
+  }
+  /* line 352, blocks/_profile.scss */
+  .form__contact .form__input--phone {
+    background: url("/image/mobile-icon/phone.png") no-repeat scroll 440px 14px;
+  }
+
+  /* line 356, blocks/_profile.scss */
+  .form__title:before {
+    width: 815px;
+    right: -97px;
+  }
+
+  /* line 360, blocks/_profile.scss */
+  .form__title:after {
+    width: 40px;
+    left: -97px;
+  }
+
+  /* line 364, blocks/_profile.scss */
+  .form__title--contact:before {
+    width: 1145px;
+  }
+
+  /* line 367, blocks/_profile.scss */
+  .form__title--additionally:before {
+    width: 1110px;
+  }
+
+  /* line 370, blocks/_profile.scss */
+  textarea {
+    width: 100%;
+    height: 175px;
+    border: 1px solid #F7F7F7;
+  }
+
+  /* line 375, blocks/_profile.scss */
+  .form__checkbox {
+    width: 25%;
+    margin-bottom: 61px;
+  }
+
+  /* line 379, blocks/_profile.scss */
+  .form__button {
+    width: 568px;
+  }
+}
+/* line 1, blocks/_footer.scss */
+.location {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 427px;
+  margin-top: 27px;
+  padding-top: 30px;
+}
+/* line 8, blocks/_footer.scss */
+.location:before {
+  position: absolute;
+  content: '';
+  background-image: url("/image/mobile-image/map-pin.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 320px;
+  height: 400px;
+  bottom: 0;
+  left: -20px;
+}
+
+/* line 20, blocks/_footer.scss */
+.location__invitation {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/* line 26, blocks/_footer.scss */
+.location__address {
+  font-family: 'Arial',sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+}
+
+@media (min-width: 768px) {
+  /* line 33, blocks/_footer.scss */
+  .location {
+    padding-bottom: 462px;
+    margin-top: 62px;
+    padding-top: 65px;
+  }
+  /* line 37, blocks/_footer.scss */
+  .location:before {
+    background-image: url("/image/table-image/map-pin.png");
+    width: 768px;
+    height: 400px;
+    bottom: 0;
+    left: -30px;
+  }
+
+  /* line 45, blocks/_footer.scss */
+  .location__invitation {
+    font-size: 20px;
+    line-height: 25px;
+    margin-left: 40px;
+  }
+
+  /* line 50, blocks/_footer.scss */
+  .location__address {
+    font-size: 16px;
+    margin-right: 40px;
+    text-align: right;
+  }
+
+  /* line 56, blocks/_footer.scss */
+  .location__address-span {
+    line-height: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  /* line 61, blocks/_footer.scss */
+  .background-location {
+    background: url("/image/desktop-image/map-pin.png") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 110px;
+    padding-top: 100px;
+    margin-top: 85px;
+  }
+
+  /* line 73, blocks/_footer.scss */
+  .location {
+    width: 570px;
+    background-color: #ffffff;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 70px 75px 70px 75px;
+  }
+  /* line 81, blocks/_footer.scss */
+  .location:before {
+    display: none;
+  }
+
+  /* line 85, blocks/_footer.scss */
+  .location__invitation {
+    font-size: 20px;
+    line-height: 25px;
+    margin-left: 0;
+  }
+
+  /* line 90, blocks/_footer.scss */
+  .location__address {
+    font-size: 16px;
+    margin-right: 0;
+    text-align: right;
+  }
+
+  /* line 96, blocks/_footer.scss */
+  .location__address-span {
+    line-height: 50px;
+  }
+}
+/* line 100, blocks/_footer.scss */
+.footer {
+  background-color: #F2F2F2;
+  width: 320px;
+  margin: 0 auto;
+}
+
+/* line 105, blocks/_footer.scss */
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 110, blocks/_footer.scss */
+.footer__title {
+  position: relative;
+  margin-top: 39px;
+  padding-bottom: 62px;
+  border-bottom: 2px solid #DADADA;
+  padding-left: 160px;
+  padding-right: 160px;
+}
+/* line 118, blocks/_footer.scss */
+.footer__title:before {
+  position: absolute;
+  content: '';
+  background-image: url("/image/mobile-icon/footer-logo.svg.png");
+  width: 128px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  left: 96px;
+  bottom: 31px;
+}
+/* line 130, blocks/_footer.scss */
+.footer__title:hover {
+  opacity: 0.9;
+}
+/* line 133, blocks/_footer.scss */
+.footer__title:focus {
+  opacity: 0.7;
+}
+
+/* line 138, blocks/_footer.scss */
+.footer__list {
+  width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 22px;
+  padding-bottom: 22px;
+  border-bottom: 2px solid #DADADA;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* line 149, blocks/_footer.scss */
+.footer__text {
+  position: relative;
+  width: 280px;
+  font-family: 'Arial',sans-serif;
+  font-size: 16px;
+  text-align: left;
+  padding-top: 29px;
+  padding-bottom: 30px;
+}
+/* line 158, blocks/_footer.scss */
+.footer__text:before {
+  position: absolute;
+  content: '';
+  background-image: url("/image/mobile-icon/htmlacademy.png");
+  width: 27px;
+  height: 34px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  right: 0;
+  top: 20px;
+}
+
+/* line 173, blocks/_footer.scss */
+.footer__link--vk {
+  display: block;
+  background-image: url("/image/mobile-icon/m-vk.svg.png");
+  width: 22px;
+  height: 12px;
+  background-repeat: no-repeat;
+}
+
+/* line 181, blocks/_footer.scss */
+.footer__link--inst {
+  display: block;
+  background-image: url("/image/mobile-icon/m-insta.svg.png");
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+/* line 188, blocks/_footer.scss */
+.footer__link--face {
+  display: block;
+  background-image: url("/image/mobile-icon/m-fb.svg.png");
+  width: 10px;
+  height: 19px;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  /* line 199, blocks/_footer.scss */
+  .footer {
+    background-color: #F2F2F2;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  /* line 204, blocks/_footer.scss */
+  .footer__wrapper {
+    width: 100%;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  /* line 210, blocks/_footer.scss */
+  .footer__title {
+    position: relative;
+    margin-top: 39px;
+    padding-bottom: 62px;
+    border-bottom: none;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  /* line 218, blocks/_footer.scss */
+  .footer__title:before {
+    position: absolute;
+    content: '';
+    background-image: url("/image/mobile-icon/footer-logo.svg.png");
+    width: 128px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: 0;
+    bottom: 31px;
+  }
+
+  /* line 231, blocks/_footer.scss */
+  .footer__list {
+    width: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 22px;
+    padding-bottom: 0;
+    border-bottom: none;
+    padding-right: 20px;
+    padding-left: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  /* line 243, blocks/_footer.scss */
+  .footer__link--vk {
+    margin-right: 30px;
+  }
+
+  /* line 246, blocks/_footer.scss */
+  .footer__link--inst {
+    margin-right: 30px;
+  }
+
+  /* line 250, blocks/_footer.scss */
+  .footer__link {
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* line 254, blocks/_footer.scss */
+  .footer__text {
+    position: relative;
+    width: 170px;
+    font-family: 'Arial',sans-serif;
+    font-size: 16px;
+    text-align: left;
+    padding-top: 29px;
+    padding-bottom: 30px;
+    margin-top: 13px;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  /* line 266, blocks/_footer.scss */
+  .footer__text:before {
+    position: absolute;
+    content: '';
+    background-image: url("/image/mobile-icon/htmlacademy.png");
+    width: 27px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 0;
+    top: 24px;
+  }
+
+  /* line 279, blocks/_footer.scss */
+  .footer__text:hover:before {
+    position: absolute;
+    content: '';
+    background-image: url("/image/table-icon/htmlacademy.svg copy.png");
+    width: 27px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 0;
+    top: 24px;
+  }
+
+  /* line 291, blocks/_footer.scss */
+  .footer__link--vk {
+    display: block;
+    background-image: url("/image/table-icon/vk.svg.png");
+    width: 30px;
+    height: 16px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  /* line 299, blocks/_footer.scss */
+  .footer__link--inst {
+    display: block;
+    background-image: url("/image/table-icon/insta.svg.png");
+    width: 23px;
+    height: 23px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  /* line 307, blocks/_footer.scss */
+  .footer__link--face {
+    display: block;
+    background-image: url("/image/table-icon/fb.svg.png");
+    width: 14px;
+    height: 28px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+@media (min-width: 1440px) {
+  /* line 319, blocks/_footer.scss */
+  .footer {
+    background-color: #F2F2F2;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* line 326, blocks/_footer.scss */
+  .footer__link--vk {
+    display: block;
+    background-image: url("/image/table-icon/vk.svg.png");
+    width: 30px;
+    height: 16px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  /* line 332, blocks/_footer.scss */
+  .footer__link--vk:hover {
+    background-image: url("/image/table-icon/vk.svg copy.png");
+  }
+
+  /* line 336, blocks/_footer.scss */
+  .footer__link--inst {
+    display: block;
+    background-image: url("/image/table-icon/insta.svg.png");
+    width: 23px;
+    height: 23px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  /* line 342, blocks/_footer.scss */
+  .footer__link--inst:hover {
+    background-image: url("/image/table-icon/insta.svg copy.png");
+  }
+
+  /* line 346, blocks/_footer.scss */
+  .footer__link--face {
+    display: block;
+    background-image: url("/image/table-icon/fb.svg.png");
+    width: 14px;
+    height: 28px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  /* line 352, blocks/_footer.scss */
+  .footer__link--face:hover {
+    background-image: url("/image/table-icon/fb.svg copy.png");
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

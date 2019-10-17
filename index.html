@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Подборка программы</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="fonts/oswald.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__section">
+            <a class="header__logo" href="#">
+                <picture class="header__logo-picture">
+                    <source class="header__logo-source" srcset="image/desktop-icon/logo-desktop.svg.png"
+                            media="(min-width: 1440px)">
+                    <source srcset="image/table-icon/logo-tablet.svg.png" media="(min-width: 768px)">
+                    <img class="header__logo-img" src="image/mobile-icon/logo-mobile-header.svg.png" alt="Логотип">
+                </picture>
+            </a>
+            <div class="navBurger" id="navToggle"></div>
+            <div class="header__block ">
+                <nav class="nav">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a class="menu__link " href="/index.html">главная</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link " href="#">каталог продукции</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--active" href="#">подбор программы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="selection-program">
+    <div class="container">
+        <div class="profile">
+            <h1 class="title profile__title">Подбор программы</h1>
+            <span class="subtitle profile__subtitle">Заполните анкету и мы подберем
+         программу питания для вашего кота</span>
+            <form action="#" class="profile__form form">
+                <div class="form__content">
+                    <div class="form__statistics">
+                        <div class="form__group">
+                            <label class="form__label label">Имя:*</label>
+                            <input class="form__input input" required name="name" type="text">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label label">вес(кг):* </label>
+                            <input class="form__input input" required name="weight" type="number">
+                        </div>
+                        <div class="form__group form__group--last">
+                            <label class="form__label label">возраст(лет):</label>
+                            <input class="form__input input" name="age" type="number">
+                        </div>
+                    </div>
+                    <div class="form__block block">
+                        <div class="form__radio radio--first">
+                            <input class="form__check" name="checkbox" type="radio" checked="checked">
+                            <label class="form__label label-radio">похудение</label>
+                        </div>
+                        <div class="form__radio radio">
+                            <input class="form__check" name="checkbox" type="radio" checked="checked">
+                            <label class="form__label label-radio">набор массы </label>
+                        </div>
+                        <div class="form__radio radio">
+                            <input class="form__check" name="checkbox" type="radio" checked="checked">
+                            <label class="form__label label-radio">не знаю(нужен ваш совет)</label>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="form__title ">Контактные данные
+                    (владельца кота)</h2>
+                <div class="form__contact contact">
+                    <div class="form__group group">
+                        <label class="form__label label">email:* </label>
+                        <input class="form__input form__input--mail" required name="email" type="email">
+                    </div>
+                    <div class="form__group group">
+                        <label class="form__label label">телефон:*</label>
+                        <input class="form__input form__input--phone" required name="phone" type="tel">
+                    </div>
+                </div>
+                <div class="form__comments">
+                    <h2 class="form__title form__title--contact">Комментарий</h2>
+                    <textarea name="textarea" class="form__textarea"
+                              placeholder="расскажите обо всех повадках кота"></textarea>
+                </div>
+                <div class="form__additionally">
+                    <h2 class="form__title form__title--additionally">Дополнительно</h2>
+                    <div class="form__additionally-block">
+                        <div class="form__checkbox">
+                            <input class="form__box" name="checkbox" type="checkbox">
+                            <label class="form__label">сахарозаменитель</label>
+                        </div>
+                        <div class="form__checkbox">
+                            <input class="form__box" name="checkbox" type="checkbox">
+                            <label class="form__label">питьевая вода</label>
+                        </div>
+                        <div class="form__checkbox">
+                            <input class="form__box" name="checkbox" type="checkbox">
+                            <label class="form__label">молоко</label>
+                        </div>
+                        <div class="form__checkbox">
+                            <input class="form__box" name="checkbox" type="checkbox">
+                            <label class="form__label">витамины</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__submit">
+                    <button name="button" type="submit" class="form__button button">отправить заявку</button>
+                    <span class="form__span">* — Обязательные поля</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="background-location">
+        <div class="container">
+            <div class="location">
+                <p class="location__invitation">приглашаем<br> к сотрудничеству<br> дилеров!</p>
+                <p class="location__address">ул. Большая<br> Конюшенная, д. 19/8<br>
+                    <span class="location__address-span"> Санкт-Петербург</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer__wrapper">
+            <a href="#" class="footer__title"></a>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__link footer__link--vk" href="#"></a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link footer__link--inst" href="#"></a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link footer__link--face" href="#"></a>
+                </li>
+            </ul>
+            <p class="footer__text footer__text--hover">HTML Academy</p>
+        </div>
+    </div>
+</footer>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src="script/js.js"></script>
+</body>
+</html>
