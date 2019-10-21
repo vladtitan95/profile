@@ -1,155 +1,301 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Подборка программы</title>
+    <title>Landing</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="fonts/oswald.css">
+    <link rel="stylesheet" href="fonts/stylename.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="header">
-    <div class="container">
-        <div class="header__section">
-            <a class="header__logo" href="#">
-                <picture class="header__logo-picture">
-                    <source class="header__logo-source" srcset="image/desktop-icon/logo-desktop.svg.png"
-                            media="(min-width: 1440px)">
-                    <source srcset="image/table-icon/logo-tablet.svg.png" media="(min-width: 768px)">
-                    <img class="header__logo-img" src="image/mobile-icon/logo-mobile-header.svg.png" alt="Логотип">
-                </picture>
-            </a>
-            <div class="navBurger" id="navToggle"></div>
-            <div class="header__block ">
-                <nav class="nav">
-                    <ul class="menu">
-                        <li class="menu__item">
-                            <a class="menu__link " href="/index.html">главная</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link " href="#">каталог продукции</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link menu__link--active" href="#">подбор программы</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
+<div class="header-main container">
+    <img  class="menu-links__logo" src="image/icon.png" alt="FoodDelivery">
+<div class="food-delivery">
+    <nav class="menu">
+        <ul class="menu-link" >
+        <li class="menu-link__item"><a class="menu-link__nav" href="#">Возможности</a></li>
+            <li class="menu-link__item"> <a  class="menu-link__nav" href="#">Цены</a></li>
+            <li class="menu-link__item"> <a class="menu-link__nav" href="#">Блог</a></li>
+            <li class="menu-link__item"><a class="menu-link__nav" href="#">Контакты</a></li>
+        </ul>
+    </nav>
+</div>
+</div>
+    <div class="navBurger" role="navigation" id="navToggle"></div>
+    <section class="section-wrapper container" >
+      <div class="block">
+          <h1 class="title">Сервис для служб<br>
+              по доставке еды</h1>
+        <p class="subtitle" >Создан специально для ресторанов, кафе и streetfood</p>
+        <form class="search-form">
+            <input class="search-form__input" type="tel" placeholder="Ваш телефон">
+            <button class="search-form__button" type="button">КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА</button>
+        </form>
+      </div>
+
+    </section>
 </header>
-<section class="selection-program">
-    <div class="container">
-        <div class="profile">
-            <h1 class="title profile__title">Подбор программы</h1>
-            <span class="subtitle profile__subtitle">Заполните анкету и мы подберем
-         программу питания для вашего кота</span>
-            <form action="#" class="profile__form form">
-                <div class="form__content">
-                    <div class="form__statistics">
-                        <div class="form__group">
-                            <label class="form__label label">Имя:*</label>
-                            <input class="form__input input" required name="name" type="text">
-                        </div>
-                        <div class="form__group">
-                            <label class="form__label label">вес(кг):* </label>
-                            <input class="form__input input" required name="weight" type="number">
-                        </div>
-                        <div class="form__group form__group--last">
-                            <label class="form__label label">возраст(лет):</label>
-                            <input class="form__input input" name="age" type="number">
-                        </div>
-                    </div>
-                    <div class="form__block block">
-                        <div class="form__radio radio--first">
-                            <input class="form__check" name="checkbox" type="radio" checked="checked">
-                            <label class="form__label label-radio">похудение</label>
-                        </div>
-                        <div class="form__radio radio">
-                            <input class="form__check" name="checkbox" type="radio" checked="checked">
-                            <label class="form__label label-radio">набор массы </label>
-                        </div>
-                        <div class="form__radio radio">
-                            <input class="form__check" name="checkbox" type="radio" checked="checked">
-                            <label class="form__label label-radio">не знаю(нужен ваш совет)</label>
-                        </div>
-                    </div>
-                </div>
-                <h2 class="form__title ">Контактные данные
-                    (владельца кота)</h2>
-                <div class="form__contact contact">
-                    <div class="form__group group">
-                        <label class="form__label label">email:* </label>
-                        <input class="form__input form__input--mail" required name="email" type="email">
-                    </div>
-                    <div class="form__group group">
-                        <label class="form__label label">телефон:*</label>
-                        <input class="form__input form__input--phone" required name="phone" type="tel">
-                    </div>
-                </div>
-                <div class="form__comments">
-                    <h2 class="form__title form__title--contact">Комментарий</h2>
-                    <textarea name="textarea" class="form__textarea"
-                              placeholder="расскажите обо всех повадках кота"></textarea>
-                </div>
-                <div class="form__additionally">
-                    <h2 class="form__title form__title--additionally">Дополнительно</h2>
-                    <div class="form__additionally-block">
-                        <div class="form__checkbox">
-                            <input class="form__box" name="checkbox" type="checkbox">
-                            <label class="form__label">сахарозаменитель</label>
-                        </div>
-                        <div class="form__checkbox">
-                            <input class="form__box" name="checkbox" type="checkbox">
-                            <label class="form__label">питьевая вода</label>
-                        </div>
-                        <div class="form__checkbox">
-                            <input class="form__box" name="checkbox" type="checkbox">
-                            <label class="form__label">молоко</label>
-                        </div>
-                        <div class="form__checkbox">
-                            <input class="form__box" name="checkbox" type="checkbox">
-                            <label class="form__label">витамины</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form__submit">
-                    <button name="button" type="submit" class="form__button button">отправить заявку</button>
-                    <span class="form__span">* — Обязательные поля</span>
-                </div>
-            </form>
-        </div>
+<section class="section-column container" >
+    <h2 class="section-column__subtitle" >Автоматизируйте бизнес по доставке еды</h2>
+    <p class="section-column__text">Мобильные приложения IOS и Android</p>
+    <p class="section-column__text">
+        В комплекс программных решений для ресторанов,
+        кафе и служб доставки еды входят нативные приложения для платформ Android и IOS.
+        Приложения управляются из личного кабинета администратора,к которому также подключается сайт.
+        Сайт также входит в комплекс. Все изменения в меню, добавление новых блюд, изменение цены,
+        описания, автоматически изменяются в приложениях и на сайте.</p>
+    <p class="block-wrapper">
+        <a  href="#" class="block-wrapper__appstore" >
+             Cкачать с<br>
+             <span class="block-wrapper__span">Appstore</span>
+
+        </a>
+        <a href="#" class="block-wrapper__playstore" >
+            Cкачать с<br>
+            <span class="block-wrapper__span">Playstore</span>
+
+        </a>
+    </p>
+</section>
+<section class="section-background">
+    <div class="block-content container">
+        <h2 class="block-content__subtitle">Возможности сервиса</h2>
+        <ul class="block-content__list phone-background-style">
+            <li class="block-content__list-items"><p class="block-content-list__text block-content__list-text--one ">ПРИЛОЖЕНИЕ ДЛЯ<br>
+                АДМИНИСТРАТОРОВ</p>
+            </li>
+            <li class="block-content__list-items"><p class="block-content-list__text block-content__list-text--two">САЙТ СЛУЖБЫ<br>
+                ПО ДОСТАВКЕ ЕДЫ</p>
+            </li>
+            <li class="block-content__list-items"><p class="block-content-list__text block-content__list-text--three">ПРИЛОЖЕНИЕ<br>
+                ДЛЯ КУРЬЕРА</p></li>
+            <li class="block-content__list-items"><p class="block-content-list__text block-content__list-text--four">ПРОГРАММА<br> ЛОЯЛЬНОСТИ</p></li>
+            <li class="block-content__list-items"><p class="block-content-list__text block-content__list-text--five">ПРИЛОЖЕНИЕ ДЛЯ<br> КЛИЕНТОВ</p></li>
+            <li class="block-content__list-items"><p class="block-content-list__text block-content__list-text--six">ИНТЕГРАЦИЯ С<br>
+                IT-СИСТЕМАМИ</p>
+            </li>
+        </ul>
+    </div>
+    <div class="block_container container">
+        <h2 class="block-content__subtitle-text">Ваш бизнес в телефоне ваших клиентов
+        </h2>
+      <ul class="block-content__text">
+          <li>1. Пуш-уведомления. Вы можете всегда отправить сообщение о промо-акциии стимулировать продажи.
+          </li>
+          <li>2. Скачав 1 раз приложение на телефон, пользователю нет необходимости искать вас в поисковых системах.
+          </li>
+          <li>3. Экономия на рекламе. Вам нет необходимости постоянно оплачивать дорогостоящую рекламу Яндексу и Google.
+          </li>
+          <li>4. Уведомления о статусе заказа. Пользователь будет видеть в каком состоянии находится его заказ с помощью автоматических пуш уведомлений.
+          </li>
+          <li>5. Возможность выбрать дату и время доставки.
+          </li>
+          <li>6. Возможность публиковать акции.</li>
+      </ul>
     </div>
 </section>
-<footer class="footer">
-    <div class="background-location">
-        <div class="container">
-            <div class="location">
-                <p class="location__invitation">приглашаем<br> к сотрудничеству<br> дилеров!</p>
-                <p class="location__address">ул. Большая<br> Конюшенная, д. 19/8<br>
-                    <span class="location__address-span"> Санкт-Петербург</span></p>
+<section class="section-flex container">
+    <div class="block-information">
+        <h2 class="block-information__title">Программа лояльности</h2>
+        <p class="block-information__text"><span>Разработка программ лояльности:</span><br>Привлечение нового клиента обходится в 5-10 раз дороже, чем удержание старых. Чек постоянных покупателей на 60-70% выше, чем у тех, кто совершил одноразовую покупку. Исследования в области маркетинга дают простой вывод: дешевле удерживать старых клиентов, чем постоянно искать новых.
+        </p>
+        <p class="block-information__text-subtitle">Преимущества программы:</p>
+        <ol class="block-information__list">
+            <li>1. Гибкая настройка программы лояльности<br>
+                Возможность реализовать любую программу лояльности: дисконтную, бонусную и дисконтно-бонусную. Можно использовать различные типы карт, установить различные условия для разных товарных групп, настроить зависимость процента скидок и накопления бонусов от суммы чека, и многое другое.
+            </li>
+            <li>2. Автоматическое ведение клиентской базы<br>
+                Данные о клиенте сразу попадают в электронную базу без использования бумажных анкет. При этом, проверяется достоверность телефонного номера с получением согласия абонента на смс
+            </li>
+            <li>3. Контроль соблюдения условий программы лояльности
+            </li>
+            <li>4.Телефонный номера клиента в качестве карты лояльности
+            </li>
+            <li>5. Стимулирование повторных продаж</li>
+            <li>6. Мониторинг удовлетворённости клиентов</li>
+            <li>7. Контроль оттока клиентов</li>
+            <li>8. Привлечение новых клиентов</li>
+            <li>9. Расчёт аналитических данных</li>
+        </ol>
+    </div>
+
+</section>
+<section class="section-flex-it container">
+   <div class="block-it-text">
+    <h2 class="block-it-text__subtitle">Интеграция с IT системами</h2>
+    <ul class="block-it-text__list">
+        <li>Наш сервис интегрируется с такими it системами:</li>
+        <li>1.Iiko-система автоматизации ресторанов, которая помогает сокращать издержки и увеличивать прибыль,
+            а также всегда быть в курсе всех дел своего ресторана или ресторанной сети.</li>
+        <li>2.Программа R-Keeper-первая российская частная фирма, вышедшей на рынок общественного питанияс системой автоматизации ресторанов.
+        </li>
+        <li>И другие сервисы, которые открыты для интеграции посредством API.</li>
+    </ul>
+   </div>
+</section>
+<section class="background-block">
+    <div class="background-block__content container">
+       <h2 class="background-block__title">Стоимость аренды сервиса по доставке еды</h2>
+    <ul class="block-price">
+        <li class=" block-price__start">
+        <h2 class="block-price__start-title">Стартовый</h2>
+        <span class="block-price__start-dollars ">$2500</span>
+        <span class="block-price__start-month">в месяц</span>
+        <p class="block-price__start-text">За 1 платформу + сайт</p>
+         <button class="block-price__btn" type="button">Оставить заявку</button>
+        </li>
+        <li class="block-price__start ">
+            <h3 class="block-price__start-title">Продвинутый</h3>
+            <span class="block-price__start-dollars">$5 000</span>
+            <span class="block-price__start-month">в месяц</span>
+            <p class="block-price__start-text">За 2 платформы + сайт</p>
+           <button class="block-price__btn" type="button">Оставить заявку</button>
+    </li>
+    </ul>
+        <form class="block-price-form">
+            <input class="block-price-form__input" type="email" placeholder="Email">
+            <input class="block-price-form__input" type="number" placeholder="Телефон">
+            <button class="block-price-form__btn" type="button">ОСТАВИТЬ ЗАЯВКУ</button>
+        </form>
+    </div>
+</section>
+<section class="section-service container">
+    <h2 class="section-service__title">Дополнительные услуги</h2>
+    <ul class="section-service__list">
+        <li class="section-service__list-items section-service__list-text section-service__list-text--one">Настройка рекламы<br> вашего приложения</li>
+        <li class="section-service__list-items section-service__list-text section-service__list-text--two">Партизанский маркетинг<br> приложений</li>
+        <li class="section-service__list-items
+        section-service__list-text section-service__list-text--three"> Продвижение<br> приложений с помощью<br> СМИ</li>
+        <li class="section-service__list-items section-service__list-text section-service__list-text--four">Фичеринг приложений</li>
+        <li class="section-service__list-items
+        section-service__list-text section-service__list-text--five">Создание видеороликов<br> презентации приложения
+            </li>
+    </ul>
+    <p class="section-service__link">*цены обсуждаются индивидуально</p>
+</section>
+<section class="section-blog-content container">
+    <h2 class="section-blog__title">Блог</h2>
+    <ul class="section-blog" >
+    <li class="section-blog__list">
+        <a>
+        <article class="section-blog__article">
+        <img class="section-blog__image" src="image/fast-food-mobile-apps.png" alt="Картинка 1">
+       <h3 class="section-blog__subtitle">15 мировых супов<br>
+           из «Золотой тысячи»</h3>
+        <div class="section-blog__body">
+        <p class="section-blog__body-text">Apple Inc has decided to launch the
+            much awaited Apple Watch in the
+            upcoming month of April and has </p>
+        </div>
+        <footer class="section-blog__footer">
+        <time class="section-blog__footer-time">
+            1 ОКТЯБРЯ 2018
+        </time>
+        <span class="section-blog__footer-span">343</span>
+        </footer>
+        </article>
+        </a>
+    </li>
+    <li class="section-blog__list">
+        <a>
+        <article class="section-blog__article">
+        <img class="section-blog__image" src="image/fast-food.png" alt="Картинка 2">
+        <h2 class="section-blog__subtitle">Готовьте быстро и легко</h2>
+            <div class="section-blog__body">
+        <p class="section-blog__body-text">Apple Inc has decided to launch the
+            much awaited Apple Watch in the
+            upcoming month of April and has </p>
             </div>
+        <footer class="section-blog__footer">
+        <time class="section-blog__footer-time">
+            1 СЕНТЯБРЯ 2018
+        </time>
+        <span class="section-blog__footer-span">343</span>
+        </footer>
+        </article>
+        </a>
+    </li>
+    <li class="section-blog__list" >
+        <a>
+        <article class="section-blog__article">
+        <img class="section-blog__image" src="image/food-and-drink.png" alt="Картинка 3">
+        <h2 class="section-blog__subtitle">Лучшие блоги о<br>
+            правильном питании</h2>
+        <div class="section-blog__body">
+        <p class="section-blog__body-text">Apple Inc has decided to launch the
+            much awaited Apple Watch in the
+            upcoming month of April and has </p>
         </div>
-    </div>
-    <div class="container">
-        <div class="footer__wrapper">
-            <a href="#" class="footer__title"></a>
-            <ul class="footer__list">
-                <li class="footer__item">
-                    <a class="footer__link footer__link--vk" href="#"></a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__link footer__link--inst" href="#"></a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__link footer__link--face" href="#"></a>
-                </li>
+        <footer class="section-blog__footer">
+        <time class="section-blog__footer-time">
+            1 НОЯБРЯ 2018
+        </time>
+        <span class="section-blog__footer-span">343</span>
+        </footer>
+        </article>
+        </a>
+    </li>
+    </ul>
+</section>
+<footer class="footer">
+    <h2 class="footer__title container">Контакты для связи</h2>
+    <section class="footer-section container">
+        <div class="footer-section__left">
+            <p class="footer-section__left-text"><span class="footer-section__left-subtext">Компания ALAKRIS</span><br>
+                Мы открыты для сотрудничества и развития</p>
+            <ul class="footer-section__left-list">
+                <li class="footer-section__item">По всем вопросам пишите на почту:<br>
+               <a href="#">001@alakris.ru</a> </li>
+                <li class="footer-section__item">Или звоните по телефону:<br>
+                    <a href="tel:+74952043570">+7 (495) 204-35-70</a></li>
+                <li class="footer-section__item">Адрес сайта: <br>
+                   <a href="#">www.alakris.ru</a></li>
             </ul>
-            <p class="footer__text footer__text--hover">HTML Academy</p>
         </div>
-    </div>
+        <div class="footer-section__right">
+            <p class="footer-section__right-text">Мы также оказываем широкий спектр услуг:</p>
+            <ol class="footer-section__right-list">
+                <li><a class="footer-section__right-link" href="#">
+                    1. Создание и продвижение сайтов и приложений.
+                </a></li>
+                <li><a class="footer-section__right-link" href="#">
+                    2. Техническая поддержка, обновление сайтов и приложений.
+                </a></li>
+                <li><a class="footer-section__right-link" href="#">
+                    3. Продвижение в социальных сетях.
+                </a></li>
+                <li><a class="footer-section__right-link" href="#">
+                    4. Видеомаркетинг
+                </a></li>
+                <li><a class="footer-section__right-link" href="#">
+                    5. Услуги хостинга и администрирование серверов.
+                </a></li>
+                <li><a class="footer-section__right-link" href="#">
+                    6. Интернет реклама.
+                </a></li>
+                <li><a class="footer-section__right-link" href="#">
+                    7. Комплексный интернет маркетинг.
+                </a></li>
+                <li><a class="footer-section__right-link" href="#">
+                    8. Создание фирменного стиля
+                </a></li>
+                <li><a class="footer-section__right-link" href="#">
+                    9. Внедрение CRM систем.
+                </a></li>
+            </ol>
+        </div>
+    </section>
+    <section class="footer-bottom">
+        <div class="footer-bottom__text container" >
+            <p class="footer-bottom__text-span" >Копирайт © 2018 Alakris, Все права защищены.</p>
+            <p class="footer-bottom__text-span">Сайт разработан под руководством
+                <a class="footer-bottom__text-link" href="#">Alaris</a></p>
+        </div>
+    </section>
 </footer>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src="script/js.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script  src="script/js.js"></script>
 </body>
 </html>
